@@ -264,9 +264,9 @@ if DATA_NAME =="syn":
 
 
     data_configs = [
-        # {"input_dim": 20, "num_data": 40000},
-        # {"input_dim": 100, "num_data": 60000},
-        {"input_dim": 500, "num_data": 100000}
+        {"input_dim": 20, "num_data": 40000},
+        {"input_dim": 100, "num_data": 60000},
+        # {"input_dim": 500, "num_data": 100000}
     ]
 
     # Code block to run for each dictionary
