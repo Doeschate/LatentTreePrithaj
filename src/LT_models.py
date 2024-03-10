@@ -38,11 +38,11 @@ class LatentTree(torch.nn.Module):
         q = self._compute_q(x)
         z = torch.clamp(q, 0, 1)
 
-        if self.eta > 0:
-            # import pdb; pdb.set_trace()
-            #self.d = pruning_qp(q.cpu(), self.eta).to(x.device) # pruning runs only on cpu
-            self.d = torch.clamp(self.d, 0, 1) # apply box constraints
-            z = torch.min(z, self.d) # prune tree traversals
+        # if self.eta > 0:
+        #     # import pdb; pdb.set_trace()
+        #     #self.d = pruning_qp(q.cpu(), self.eta).to(x.device) # pruning runs only on cpu
+        #     self.d = torch.clamp(self.d, 0, 1) # apply box constraints
+        #     z = torch.min(z, self.d) # prune tree traversals
 
         self.z = z
         self.q = q
