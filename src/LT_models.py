@@ -5,7 +5,7 @@ from pathlib import Path
 
 from src.trees import BinarySearchTree
 from src.monitors import MonitorTree
-from src.qp import pruning_qp
+#from src.qp import pruning_qp
 from src.utils import *
 
 # ----------------------------------------------------------------------- LATENT TREE LAYER
@@ -40,7 +40,7 @@ class LatentTree(torch.nn.Module):
 
         if self.eta > 0:
             # import pdb; pdb.set_trace()
-            self.d = pruning_qp(q.cpu(), self.eta).to(x.device) # pruning runs only on cpu
+            #self.d = pruning_qp(q.cpu(), self.eta).to(x.device) # pruning runs only on cpu
             self.d = torch.clamp(self.d, 0, 1) # apply box constraints
             z = torch.min(z, self.d) # prune tree traversals
 
