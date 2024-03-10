@@ -1602,9 +1602,9 @@ if DATA_NAME =="UCI":
     
         
     # DATA_NAME_UCI=["ADULT","bank_marketing","credit_card_defaults","gamma_telescope","rice_dataset","german_credit_data","spambase_dataset","accelerometer_gyro_dataset","swarm_behaviour"]#,"HIGGS"]
-    DATA_NAME_UCI=["OpenML_Credit","OpenML_Electricity","OpenML_Pol","OpenML_House_16H","OpenML_MiniBooNE","OpenML_Eye_movements","OpenML_Diabetes130US","OpenML_Jannis","OpenML_Bioresponse","OpenML_California","OpenML_Heloc"]#","OpenML_Covertype""]#,"bank_marketing","credit_card_defaults","gamma_telescope","rice_dataset","german_credit_data","spambase_dataset","accelerometer_gyro_dataset","swarm_behaviour"]#,"HIGGS"]
+    # DATA_NAME_UCI=["OpenML_Credit","OpenML_Electricity","OpenML_Pol","OpenML_House_16H","OpenML_MiniBooNE","OpenML_Eye_movements","OpenML_Diabetes130US","OpenML_Jannis","OpenML_Bioresponse","OpenML_California","OpenML_Heloc"]#","OpenML_Covertype""]#,"bank_marketing","credit_card_defaults","gamma_telescope","rice_dataset","german_credit_data","spambase_dataset","accelerometer_gyro_dataset","swarm_behaviour"]#,"HIGGS"]
 
-    # DATA_NAME_UCI=["OpenML_Covertype"]
+    DATA_NAME_UCI=["OpenML_Covertype"]
     # DATA_NAME_UCI=["ADULT"]
     for data_name in DATA_NAME_UCI:
         data = Dataset(data_name)
