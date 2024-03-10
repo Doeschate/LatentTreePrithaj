@@ -13,14 +13,14 @@ class MonitorTree():
 
     def write(self, model, it, report_tree=False, **metrics):
 
-        if report_tree and self.pruning:
+        # if report_tree and self.pruning:
 
-            self.writer.add_scalars('variables/d_group', 
-                { 
-                 "l0": torch.norm(model.latent_tree.d, p=0),
-                 "l2": torch.norm(model.latent_tree.d, p=2),
-                 # "d": model.latent_tree.d,
-                 }, it)
+            # self.writer.add_scalars('variables/d_group', 
+            #     { 
+            #      "l0": torch.norm(model.latent_tree.d, p=0),
+            #      "l2": torch.norm(model.latent_tree.d, p=2),
+            #      # "d": model.latent_tree.d,
+            #      }, it)
 
         for key, item in metrics.items():
             self.writer.add_scalars(key, item, it)
